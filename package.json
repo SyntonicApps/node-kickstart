@@ -1,0 +1,22 @@
+{
+  "name": "node-kickstart",
+  "version": "1.0.0",
+  "description": "Barebones NodeJS seed project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "mocha"
+  },
+  "author": "Andrew Brooke <andrew.brooke@syntonic.io> (https://syntonic.io)",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^2.3.3",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
+  }
+}
