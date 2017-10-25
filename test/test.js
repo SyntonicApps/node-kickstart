@@ -5,19 +5,19 @@ const request = require('supertest');
 
 const app = require('../app');
 
-describe('API Test Suite', function() {
-    describe('GET /api', function() {
-        it('should respond with JSON message', function(done) {
+describe('API Test Suite', () => {
+    describe('GET /api/v1', () => {
+        it('should respond with JSON message', (done) => {
             request(app)
-            .get('/api')
+            .get('/api/v1')
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
-			.expect(200)
-			.end(function(err, result) {
-				let json = result.body;
-                assert.equal(json.message, 'Welcome to the API!' );
-				done();
-			});
+            .expect(200)
+            .end((err, result) => {
+                let json = result.body;
+                assert.equal(json.message, 'API version: 1' );
+                done();
+            });
         });
     });
 });

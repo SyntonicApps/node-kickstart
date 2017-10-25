@@ -6,14 +6,14 @@ const bodyParser = require('body-parser');
 const app = express();
 
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 const port = process.env.PORT || 8080;
 
 const v1 = new express.Router();
 const v1Response = (req, res) => {
-    res.json({ message: 'API version: 1' });
+    res.json({message: 'API version: 1'});
 };
 
 v1.get('', v1Response);
