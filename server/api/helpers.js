@@ -90,7 +90,7 @@ function formatValidationResult(results) {
  * Handles the validationResult provided by express-validator, returns API error if any errors were present
  * @param  {Object} req  Express Request Object
  * @param  {Object} res  Express Response Object
- * @return {Boolean}     True if validation errors were present, false otherwise
+ * @return  {Object}     Builds API response containing errors if they exist, undefined otherwise
  */
 exports.handleValidationErrors = (req, res) => {
     // Check input validation result
@@ -98,6 +98,8 @@ exports.handleValidationErrors = (req, res) => {
     if (!errors.isEmpty()) {
         return buildApiResponse(req, res, HttpStatus.BAD_REQUEST, formatValidationResult(errors.array({ onlyFirstError: true })));
     }
+
+    return undefined;
 };
 
 /**
