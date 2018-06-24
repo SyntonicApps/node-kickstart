@@ -1,4 +1,4 @@
-const debug = require('debug')(process.env.DEBUG + ':api:v1');
+const debug = require('debug')('node-kickstart:api:v1');
 
 const express = require('express');
 const { check } = require('express-validator/check');

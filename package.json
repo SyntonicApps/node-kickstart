@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon server/app.js",
     "test": "cross-env DEBUG=test nyc --reporter=lcov mocha --opts test/mocha.opts && nyc report",
-    "test:full-output": "nyc --reporter=lcov mocha --opts test/mocha.opts && nyc report"
+    "test:full-output": "cross-env DEBUG=node-kickstart* nyc --reporter=lcov mocha --opts test/mocha.opts && nyc report"
   },
   "author": "Andrew Brooke <andrew.brooke@syntonic.io> (https://syntonic.io)",
   "license": "MIT",

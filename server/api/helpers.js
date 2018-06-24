@@ -1,4 +1,4 @@
-const debug = require('debug')(process.env.DEBUG + ':api:helpers');
+const debug = require('debug')('node-kickstart:api:helpers');
 
 const { validationResult } = require('express-validator/check');
 const HttpStatus = require('http-status-codes');

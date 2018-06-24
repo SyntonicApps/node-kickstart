@@ -1,5 +1,5 @@
 require('dotenv').config();
-const debug = require('debug')(process.env.DEBUG + ':app');
+const debug = require('debug')('node-kickstart:app');
 
 const bodyParser = require('body-parser');
 const express = require('express');
