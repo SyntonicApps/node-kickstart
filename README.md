@@ -13,7 +13,7 @@ NODE_ENV=development
 PORT=8080
 ```
 
-- Main file -> `app.js`
+- Main file -> `server/app.js`
 - Run & watch for changes: `npm run dev`
 - Run Mocha tests: `npm test`
 - Web client served from `public/` directory
